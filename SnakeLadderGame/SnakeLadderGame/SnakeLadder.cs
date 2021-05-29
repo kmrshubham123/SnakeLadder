@@ -10,14 +10,11 @@ namespace SnakeLadderGame
         {   ///variables
             int Position = 0; 
             int PlayerOne;
-            
+           
             ///initialize player
             PlayerOne = Position;
             Console.WriteLine($"PLAYER ONE: {PlayerOne}");
         }
-
-       
-
     }
     
 }
