@@ -14,6 +14,9 @@ namespace SnakeLadderGame
             ///initialize player
             PlayerOne = Position;
             Console.WriteLine($"PLAYER ONE: {PlayerOne}");
+            Random random = new Random();
+            int DiceRoll=random.Next(1, 7); ///RandomNO_1 to 6
+            Console.WriteLine("PLAYER ONE Dice Roll No.is:-" +DiceRoll);
         }
     }
     
