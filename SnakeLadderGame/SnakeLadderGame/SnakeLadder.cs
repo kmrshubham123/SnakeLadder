@@ -5,19 +5,37 @@ using System.Text;
 namespace SnakeLadderGame
 {
     class SnakeLadder
-    {  /// <Single_player_at_position_0>
-        public void StartGame()
-        {   ///variables
-            int Position = 0; 
-            int PlayerOne;
-           
-            ///initialize player
-            PlayerOne = Position;
-            Console.WriteLine($"PLAYER ONE: {PlayerOne}");
-            Random random = new Random();
-            int DiceRoll=random.Next(1, 7); ///RandomNO_1 to 6
-            Console.WriteLine("PLAYER ONE Dice Roll No.is:-" +DiceRoll);
-        }
+    { 
+      
+           ///variables
+        public int Position = 0;
+        const int Ladder = 1;
+        const int Snake = 2;
+          public void StartGame()
+          {
+              Random dice = new Random();
+              int DiceRoller = dice.Next(1, 7);
+              Console.WriteLine("Player rolls the die and gets :- " + DiceRoller);
+              int SnakeandLadder = dice.Next(0, 3);
+
+                switch (SnakeandLadder)
+                {
+                    case Ladder:
+                        Position += DiceRoller;
+                    Console.WriteLine("WOW! LADDER");
+                        break;
+
+                    case Snake:
+                        Position -= DiceRoller;
+                    Console.WriteLine("OH NO! ___Snake Bite");
+                        break;
+
+                    default:
+                    Console.WriteLine("No Play");
+                        break;
+                }
+          }
+        
+
     }
-    
 }
