@@ -7,6 +7,7 @@ namespace SnakeLadderGame
     class SnakeLadder
     {
         public int Position = 0;
+        public int DiceCount = 0;
         const int Ladder = 1;
         const int Snake = 2;
         public void StartGame()
@@ -38,6 +39,8 @@ namespace SnakeLadderGame
                         Console.WriteLine("No Play");
                         break;
                 }
+                DiceCount += 1;
+                Console.WriteLine("Dice rolled " + DiceCount);
                 Console.WriteLine("Current position : " + Position);
             }
             Console.WriteLine("Winning position : " + Position);
