@@ -22,13 +22,17 @@ namespace SnakeLadderGame
                 {
                     case Ladder:
                         Console.WriteLine("WOW! Ladder");
+                        if (Position + DiceRoller <= 100)
+                            Position += DiceRoller;
+                        else
+                            Position = Position + 0;
                         Position += DiceRoller;
                         break;
                     case Snake:
-                        Console.WriteLine("ohh No!_____Snake Bite");
+                        Console.WriteLine("ohh No!-----@Snake Bite");
                         Position -= DiceRoller;
                         if (Position < 0)
-                            Position = 0;
+                         Position = 0;
                         break;
                     default:
                         Console.WriteLine("No Play");
